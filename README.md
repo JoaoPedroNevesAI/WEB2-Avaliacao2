@@ -1,42 +1,100 @@
-# Catálogo de Filmes
+# 🎬 Catálogo de Filmes
 
-Aplicação web para gerenciamento de um catálogo de filmes, com funcionalidades de cadastro, edição, exclusão, pesquisa e visualização de detalhes.
-
----
-
-## Tecnologias
-
-- Frontend: React + Material UI + React Router
-- Backend: API REST (exemplo: JSON Server ou Node.js/Express)
-- Comunicação via HTTP (fetch / axios)
+Aplicação web para gerenciar um catálogo de filmes, permitindo cadastrar, visualizar, editar, excluir e buscar filmes de forma prática e visual.
 
 ---
 
-## Funcionalidades
+## 🚀 Tecnologias Utilizadas
 
-- Listar filmes com paginação e busca por título
-- Adicionar novo filme (título, descrição, ano, gênero, URL do pôster)
-- Editar filme existente
-- Excluir filme
-- Visualizar detalhes do filme
-- Mensagens de sucesso e validação
+- **Frontend:** React, React Router, Material UI
+- **Backend:** API REST (ex: JSON Server)
+- **Estilo:** MUI com tema customizado e imagem de fundo
 
 ---
 
-## Como rodar o projeto
+## 📂 Estrutura do Projeto
 
-### Backend
+```
+/
+├── backend/         → (Opcional, se usar JSON Server)
+│   └── db.json      → Base de dados fake
+├── frontend/        → Aplicação React
+│   ├── public/
+│   ├── src/
+│   │   ├── pages/   → AddMovie, EditMovie, MoviesList, MovieDetails
+│   │   └── App.js   → Rotas da aplicação
+└── README.md
+```
 
-1. Configure e inicie sua API REST em `http://localhost:3000`
-   - Pode usar [JSON Server](https://github.com/typicode/json-server) para testes rápidos, com um arquivo `db.json`.
+---
 
-Exemplo para JSON Server:
+## 🧭 Como Rodar o Projeto
 
--bash
+### ✅ Pré-requisitos
+
+Antes de começar, você precisa ter instalado:
+
+- **[Node.js](https://nodejs.org/en/)**
+- **[npm](https://www.npmjs.com/)**
+- (Opcional) **[JSON Server](https://github.com/typicode/json-server)** para mock de API REST
+
+---
+
+## 🔧 Configuração do Backend (JSON Server)
+
+1. Crie um arquivo chamado `db.json` com o seguinte conteúdo:
+
+```json
+{
+  "movies": []
+}
+```
+
+2. Instale o JSON Server globalmente (se ainda não tiver):
+
+```bash
 npm install -g json-server
-json-server --watch db.json --port 3000
+```
 
-### Frontend
-1. cd git clone <URL_DO_REPOSITORIO>
-cd <NOME_DA_PASTA>
+3. Inicie o servidor:
+
+```bash
+json-server --watch db.json --port 3000
+```
+
+> Isso iniciará sua API REST local em:  
+> 👉 `http://localhost:3000/movies`
+
+---
+
+## 💻 Configuração do Frontend (React)
+
+1. Acesse a pasta do frontend:
+
+```bash
+cd frontend
+```
+
+2. Instale as dependências:
+
+```bash
+npm install
+```
+
+3. Inicie a aplicação React:
+
+```bash
 npm start
+```
+
+4. Acesse a aplicação no navegador:
+
+```
+http://localhost:3001
+```
+
+> Obs: a porta pode variar. Verifique no terminal a porta exata que o React usou (geralmente é 3000 ou 3001).
+
+---
+
+🎉 **Bom uso e bons filmes!**
