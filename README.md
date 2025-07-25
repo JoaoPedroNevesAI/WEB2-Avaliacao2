@@ -56,10 +56,17 @@ Antes de começar, você precisa ter instalado:
 npm install -g json-server
 ```
 
-3. Inicie o servidor:
+3.1 Inicie o servidor:
 
 ```bash
 json-server --watch db.json --port 3000
+```
+###OU
+
+3.2 Inicie o servidor:
+
+```bash
+node server.js
 ```
 
 > Isso iniciará sua API REST local em:  
